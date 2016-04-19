@@ -1,0 +1,22 @@
+<ion-view view-title="Planner">
+    <ion-content>
+        
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Task Name" ng-model="data.task">
+          </label>
+        </div>
+        
+        {{task}}
+        
+        <button class="button button-block button-assertive" ng-click="addTask()">Add Task</button>
+
+        
+        <ion-list>
+            <ion-item ng-repeat="task in tasks">
+                {{task.title}}
+            </ion-item>
+        </ion-list>
+        
+    </ion-content>      
+</ion-view>
