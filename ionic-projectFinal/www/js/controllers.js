@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 
 .controller('PlannerCtrl', function($scope,Task) {
-        
+        //Array of Tasks containing the name and date added
  $scope.name="name";
   $scope.tasks = [{name: 'Go to Gym',added: new Date()},
                   {name: 'Meet Misty',added: new Date()}, 
@@ -13,11 +13,11 @@ angular.module('starter.controllers', [])
    });
    $scope.taskName = "";
  };
-  
+  //function to remove Task
  $scope.removeTask = function (index) {
    $scope.tasks.splice(index, 1);
  };
-    
+    //function to add task to the array
     $scope.addTask= function (taskName) {
    $scope.tasks.push({
       name: taskName,
