@@ -1,0 +1,24 @@
+<ion-view view-title="Planner">
+    <ion-content>
+        
+       <div id="AddTask">
+      <h3>Add Task</h3>
+      <input value="" type="text" placeholder="Name of Task" ng-model="taskName">
+      <br />
+           
+              {{task}}
+      <button class="button button-block button-assertive" ng-click="addTask(taskName)">Add to list</button>
+    </div>
+  <div id="UncheckedList">
+      <ion-list>
+         <ion-item class ="item-remove-animate item-icon-right " ng-repeat="task in tasks" class="item-unchecked">
+            
+            <b>Task Name:</b> {{task.name}}   
+             <div class = "item item-text-wrap" style = "float:right"><b>Date:</b> {{task.added | date :                    'dd-MM-yyyy HH:mm'}} </div> 
+             
+               <ion-option-button class ="button-assertive" ng-click="removeTask($index)">DELETE</button>
+             </ion-item>
+      </ion-list>
+  </div>
+    </ion-content>      
+</ion-view>
